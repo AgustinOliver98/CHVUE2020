@@ -11,13 +11,13 @@
     </v-app-bar>
     <div>
       <v-main>
-        <v-container fluid class="fill-height">
+        <v-container fluid class="fill-height home-container">
           <v-row>
             <v-col>
-              <!-- DESCRIPCITION SECTION -->
+              <description />
             </v-col>
             <v-col>
-              <!-- TODO:"REGISTER FORM COMPONENT" -->
+              <register />
             </v-col>
           </v-row>
         </v-container>
@@ -26,6 +26,19 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({});
+import { Vue, Component } from "vue-property-decorator";
+import register from "./components/register.vue";
+import description from "./components/description.vue";
+
+@Component({
+  components: { register, description },
+})
+export default class HomeViewClassComponent extends Vue {}
 </script>
+
+<style lang="scss">
+.home-container {
+  background-color: lightcoral;
+  margin: auto;
+}
+</style>
