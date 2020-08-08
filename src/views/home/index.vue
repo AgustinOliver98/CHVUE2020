@@ -23,15 +23,17 @@
         </v-container>
       </v-main>
     </div>
+    <footer-home />
   </div>
 </template>
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import register from "./components/register.vue";
 import description from "./components/description.vue";
+import footerHome from "./components/footer.vue";
 
 @Component({
-  components: { register, description },
+  components: { register, description, footerHome },
 })
 export default class HomeViewClassComponent extends Vue {}
 </script>
